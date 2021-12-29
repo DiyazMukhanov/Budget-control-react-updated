@@ -1,0 +1,16 @@
+.budget-div {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.budget-add-btn {
+    margin-left: 1rem;
+}
+
+.budget-main-btn {
+    margin-top: 1rem;
+}
+
+.budget-div label {
+    font-size: large;
+}

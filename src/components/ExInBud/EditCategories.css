@@ -1,0 +1,21 @@
+.edit-categories-div {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.edit-cats-ul {
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+.edit-categories-div h3{
+   margin-top: 1rem;
+}
+
+.edit-cats-add-new {
+    margin-top: 1rem;
+}
+
+.edit-cats-ul li {
+    margin-top: 1rem;
+}
