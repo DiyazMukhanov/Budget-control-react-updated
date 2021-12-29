@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './Budget.css';
 
 
 const Budget = props => {
@@ -20,13 +21,13 @@ const Budget = props => {
   }
 
   return (
-      <div>
+      <div className="budget-div">
           <form onSubmit={addBudgetHandler}>
               <label>Add budget sum for this month</label>
               <input onChange={budgetChangeHandler}></input>
-              <button type="submit">Add</button>
+              <button type="submit" className="btn btn-outline-primary budget-add-btn">Add</button>
           </form>
-          <button onClick={toMainHandler}>Main</button>
+          <button onClick={toMainHandler} className="btn btn-outline-primary budget-main-btn">Main</button>
       </div>
   );
 };
