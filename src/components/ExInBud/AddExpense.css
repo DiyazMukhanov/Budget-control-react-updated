@@ -15,18 +15,37 @@
 }
 
 .addExpense-form input {
-  /* margin-top: 1rem; */
+  width: 50%;
+  margin-left: 25%;
 }
+
+.addExpense-form select {
+    width: 50%;
+    margin-left: 25%;
+  }
 
 .addExpenses-edit-cat {
     margin-top: 6rem;
+    background-color: #5F9EA0;
+    color: white;
 }
 
 .addExpense-save {
     margin-top: 1rem;
+    width: 50%;
+    margin-left: 25%;
+    background-color: #5F9EA0;
+    color: white;
 }
 
 .addExpense-form label {
     margin-top: 1rem;
+    color: #5F9EA0;
+    font-weight: bold;
+}
+
+.addExpense-main-btn {
+    background-color: #5F9EA0;
+    color: white;
 }
 

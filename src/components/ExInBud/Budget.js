@@ -25,9 +25,9 @@ const Budget = props => {
           <form onSubmit={addBudgetHandler}>
               <label>Add budget sum for this month</label>
               <input onChange={budgetChangeHandler}></input>
-              <button type="submit" className="btn btn-outline-primary budget-add-btn">Add</button>
+              <button type="submit" className="budget-add-btn">Add</button>
           </form>
-          <button onClick={toMainHandler} className="btn btn-outline-primary budget-main-btn">Main</button>
+          <button onClick={toMainHandler} className="budget-main-btn">Main</button>
       </div>
   );
 };

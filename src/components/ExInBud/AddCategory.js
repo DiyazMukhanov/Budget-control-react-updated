@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './AddCategory.css';
 
 
 const AddCategory = props => {
@@ -16,11 +17,11 @@ const AddCategory = props => {
   }
 
   return (
-      <div>
+      <div className="add-cat-div-1">
           <form onSubmit={addCatSubmitHandler}>
               <label>Add Category</label>
               <input onChange={newCatChangeHandler}></input>
-              <button type="submit">Add</button>
+              <button type="submit" className="add-cat-add-btn">Add</button>
           </form>
       </div>
   );

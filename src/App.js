@@ -42,7 +42,7 @@ function App() {
     () => {
       const savedCats = localStorage.getItem("categories");
       const initialCats = JSON.parse(savedCats);
-      return initialCats || [{name: 'Home/Rent', id: 'cat1' },{name: 'Food', id: 'cat2' }, {name: 'Education', id: 'cat3' } ];
+      return initialCats || [{name: 'Home/Rent', id: 'cat1' },{name: 'Food', id: 'cat2' }, {name: 'Education', id: 'cat3' },{name: 'Utilities', id: 'cat4' }, {name: 'Parents', id: 'cat5'}, {name: 'Investments', id: 'cat6' }, {name: 'Sport', id: 'cat7' }, {name: 'Beauty', id: 'cat8'} ];
     }
     );
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -66,23 +66,23 @@ function App() {
   const [sumLeft, setSumLeft] = useState(() => {
     const savedSumLeft = localStorage.getItem("sumLeft");
     const initialSumLeft = parseInt(savedSumLeft);
-    return initialSumLeft;
+    return initialSumLeft || 0;
   });
   
   
-  useEffect(() => {
+  React.useEffect(() => {
     localStorage.setItem('expenses', JSON.stringify(expenses));
   }, [expenses]);
   
-  useEffect(() => {
+  React.useEffect(() => {
     localStorage.setItem('categories', JSON.stringify(categories));
   }, [categories]);  
 
-  useEffect(() => {
+  React.useEffect(() => {
     localStorage.setItem('budget', budget.toString());
   }, [budget]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     localStorage.setItem('sumLeft', sumLeft.toString());
   }, [sumLeft]);
   

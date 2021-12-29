@@ -38,7 +38,7 @@ const AddExpense = props => {
    return (
        <div className="addExpense-div">
            <header className="addExpense-header">
-               <button onClick={toMainPage} className="btn btn-outline-primary">Main Page</button>
+               <button onClick={toMainPage} className="addExpense-main-btn">Main Page</button>
                <h3>Add Expense</h3>
                
            </header>
@@ -51,9 +51,9 @@ const AddExpense = props => {
                </select>
                <label>Amount</label>
                <input onChange={amountChangeHandler}></input>
-               <button onClick={saveExpenseHandler} className="btn btn-outline-primary addExpense-save">Save</button>
+               <button onClick={saveExpenseHandler} className=" addExpense-save">Save</button>
            </form>
-           <button onClick={goToEditHandler} className="btn btn-outline-primary addExpenses-edit-cat">Edit categories</button>
+           <button onClick={goToEditHandler} className=" addExpenses-edit-cat">Edit categories</button>
        </div>
    );
 };
