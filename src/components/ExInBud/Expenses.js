@@ -28,7 +28,7 @@ const Expenses = props => {
     });
   
   }
-  
+
   //Showing sum of expenses of chosen month
   const thisMonthExpenses = props.expenses.filter(expense => expense.month === currentMonth);
   let initialValue = 0;
@@ -42,7 +42,7 @@ const Expenses = props => {
    return (
        <div className='expenses-div'>
            <header className='expenses-header'>
-               <div className='btn btn-outline-primary expenses-back' onClick={toMainPage}>back</div>
+               <div className='btn btn-outline-primary expenses-back' onClick={toMainPage}>Main</div>
                <div className='expenses-month-changer'>
                  <button className='btn btn-outline-primary month-change-button' onClick={monthDecrease} >prev month </button>
                  <div className='expenses-month-show'>

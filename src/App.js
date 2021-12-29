@@ -122,7 +122,7 @@ function App() {
     setSumLeft(prevLeftSum => {
       return prevLeftSum - enteredSum;
     });
-    setOpenedPage('main');
+    setOpenedPage('expenses');
     // localStorage.setItem('expenses', JSON.stringify(expenses));
   };
 
@@ -190,7 +190,7 @@ function App() {
 if(openedPage === 'addExpense'){
   return(
     <div className='App'>
-      <AddExpense expenses = {expenses} onSaveExpense = {saveExpenseHandler} onMainPage = {onMainPageHandler} cats = {categories} goToEditCategory = {goToEditCatHandler} budget = {budget} />
+      <AddExpense expenses = {expenses} onSaveExpense = {saveExpenseHandler} onMainPage = {onMainPageHandler} cats = {categories} goToEditCategory = {goToEditCatHandler} budget = {budget} nameOfMonthToday = {nameOfMonthToday} />
     </div>
   );
 }

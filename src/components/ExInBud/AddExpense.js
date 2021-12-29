@@ -3,15 +3,15 @@ import Expenses from "./Expenses";
 import './AddExpense.css';
 
 const AddExpense = props => {
-   const [enteredDate, setEnteredDate] = useState('');
+//    const [enteredDate, setEnteredDate] = useState('');
    const [enteredCatName, setEnteredCatName] = useState('Home/Rent');
    const [enteredAmount, setEnteredAmount] = useState('');
    
    
-   const dateChangeHandler = event => {
-      setEnteredDate(event.target.value);
-      console.log(enteredDate);
-   };
+//    const dateChangeHandler = event => {
+//       setEnteredDate(event.target.value);
+//       console.log(enteredDate);
+//    };
 
    const catNameChangeHandler = event => {
     setEnteredCatName(event.target.value);
@@ -24,8 +24,8 @@ const AddExpense = props => {
    };
 
    const saveExpenseHandler = () => {
-       props.onSaveExpense(enteredDate, enteredCatName, enteredAmount );
-       props.sumLeftCalc();
+       props.onSaveExpense(props.nameOfMonthToday, enteredCatName, enteredAmount );
+    //    props.sumLeftCalc();
    }
 
    const toMainPage = () => {
@@ -43,8 +43,8 @@ const AddExpense = props => {
                
            </header>
            <form className="addExpense-form">
-               <label className ="addexpense-label-date">Date</label>
-               <input onChange={dateChangeHandler} className="addexpense-input-date"></input>
+               {/* <label className ="addexpense-label-date">Date</label> */}
+               {/* <input onChange={dateChangeHandler} className="addexpense-input-date"></input> */}
                <label>Category</label>
                <select onChange={catNameChangeHandler}>
                    {props.cats.map(cat => <option value={cat.name}>{cat.name}</option>)}
