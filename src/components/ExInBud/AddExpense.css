@@ -1,0 +1,32 @@
+.addExpense-div {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.addExpense-header h3 {
+    color: #5F9EA0;
+    margin-top: 1rem;
+}
+
+.addExpense-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.addExpense-form input {
+  /* margin-top: 1rem; */
+}
+
+.addExpenses-edit-cat {
+    margin-top: 6rem;
+}
+
+.addExpense-save {
+    margin-top: 1rem;
+}
+
+.addExpense-form label {
+    margin-top: 1rem;
+}
+

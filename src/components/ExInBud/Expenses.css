@@ -1,0 +1,111 @@
+.expenses-div {
+    text-align: center;
+}
+
+.expenses-header {
+    
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.expenses-month-changer {
+    display: flex;
+    justify-content: space-evenly;
+    /* border: solid red; */
+    width: 50%;
+}
+
+.expenses-month-show {
+    
+    margin-top: -1.5rem;
+    
+}
+
+.expenses-left {
+    border:solid #ADD8E6;
+    height: 1.7rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.expenses-right {
+    border:solid #ADD8E6;
+    height: 1.7rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.expenses-back {
+    border:solid #ADD8E6;
+    height: 3rem;
+    cursor: pointer;
+    width: 4rem;
+    text-align: center;
+}
+
+.expenses-back:hover {
+   background-color: cornflowerblue;
+   color: white;
+}
+
+.expenses-plus {
+    border:solid #ADD8E6;
+    height: 3rem;
+    width: 4rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.expenses-ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.expenses-ul li {
+    background-color: #B0C4DE;
+    margin-top: 1rem;
+    color: white;
+}
+
+.expenses-month-show h4 {
+    
+    color: red;
+}
+
+.month-change-button {
+    height: 3rem;
+}
+
+@media only screen and (max-width: 715px) {
+    .expenses-month-show h3 {
+        font-size: 1rem;
+    }
+
+    .expenses-month-show h4 {
+        font-size: 1rem;
+        color: red;
+    }
+    .expenses-month-changer button {
+        border: none;
+    }
+
+  }
+
+
+
+
+
+
+  
+
+
+
+  
+
+  
