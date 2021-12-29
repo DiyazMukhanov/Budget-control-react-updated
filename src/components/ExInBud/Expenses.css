@@ -44,6 +44,9 @@
     cursor: pointer;
     width: 4rem;
     text-align: center;
+    background-color: #5F9EA0;
+    color: white;
+    padding-top: .5rem;
 }
 
 .expenses-back:hover {
@@ -57,6 +60,8 @@
     width: 4rem;
     text-align: center;
     cursor: pointer;
+    background-color: #5F9EA0;
+    color: white;
 }
 
 .expenses-ul {
@@ -68,7 +73,7 @@
 }
 
 .expenses-ul li {
-    background-color: #B0C4DE;
+    background-color: #5F9EA0;
     margin-top: 1rem;
     color: white;
 }

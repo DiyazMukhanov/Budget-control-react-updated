@@ -26,7 +26,7 @@ const MainPage = props => {
       <section className="main-page-section">
           <ul>
               <li  key="expenses" >Expenses <span className="main-page-expenses">{props.sumOfTodayMonthExpenses}</span><button onClick={props.expensesEntry} className="main-page-expense-button">Add/View Expenses</button> <button onClick={resetHandler} className="main-page-reset-button">Reset expenses</button></li> 
-              <li key="budget">Budget <span className="budget">{props.budget}</span><button onClick={budgetEnterHandler} className="main-page-budget-button">Change budget</button></li>
+              <li key="budget" className="main-li-budget">Budget <span className="budget">{props.budget}</span><button onClick={budgetEnterHandler} className="main-page-budget-button">Change budget</button></li>
           </ul>
       </section>
       <footer className="main-page-footer">

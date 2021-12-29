@@ -1,0 +1,30 @@
+.add-cat-div-1 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.add-cat-add-btn {
+    margin-top: 1rem;
+    background-color: #5F9EA0;
+    color: white;
+}
+
+.add-cat-div-1 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-cat-div-1 input {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1rem;
+}
+
+.add-cat-div-1 button {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.add-cat-div-1 label {
+   font-size: 2rem;
+}

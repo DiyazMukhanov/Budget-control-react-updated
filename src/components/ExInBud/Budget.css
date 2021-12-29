@@ -5,12 +5,21 @@
 
 .budget-add-btn {
     margin-left: 1rem;
+    background-color: #5F9EA0;
+    color: white;
 }
 
 .budget-main-btn {
     margin-top: 1rem;
+    background-color: #5F9EA0;
+    color: white;
 }
 
 .budget-div label {
     font-size: large;
+    font-weight: bold;
+}
+
+.budget-div input{
+    margin-top: 1rem;
 }

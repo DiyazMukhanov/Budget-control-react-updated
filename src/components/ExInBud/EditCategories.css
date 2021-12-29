@@ -19,3 +19,18 @@
 .edit-cats-ul li {
     margin-top: 1rem;
 }
+
+.edit-cats-toMain {
+    background-color: #5F9EA0;
+    color: white;
+}
+
+.edit-cats-add-new {
+    background-color: #5F9EA0;
+    color: white;
+}
+
+.edit-cats-delete {
+    background-color: #5F9EA0;
+    color: white;
+}
