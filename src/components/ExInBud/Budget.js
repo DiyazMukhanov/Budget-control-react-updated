@@ -4,19 +4,23 @@ import './Budget.css';
 
 const Budget = props => {
   const [enteredBudget, setEnteredBudget] = useState('');
+  
 
   const toMainHandler = () => {
    props.onMainPage();
   };
 
   const budgetChangeHandler = (event) => {
-    setEnteredBudget(parseInt(event.target.value));
+    setEnteredBudget(event.target.value);
 
   };
 
   const addBudgetHandler = (event) => {
       event.preventDefault();
-      props.onAddBudget(enteredBudget);
+      if(enteredBudget.trim().length < 1){
+         return;
+      }
+      props.onAddBudget(parseInt(enteredBudget));
       props.onMainPage();
   }
 
