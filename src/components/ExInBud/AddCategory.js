@@ -12,6 +12,9 @@ const AddCategory = props => {
 
   const addCatSubmitHandler = (event) => {
     event.preventDefault();
+    if(enteredNewCat.trim().length < 1){
+      return;
+   }
     props.onAddCategory(enteredNewCat);
     props.goToEditCategory();
   }
