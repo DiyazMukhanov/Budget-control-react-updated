@@ -49,3 +49,8 @@
     color: white;
 }
 
+.invalid {
+    border: solid red;
+    background-color: #E9967A;
+}
+

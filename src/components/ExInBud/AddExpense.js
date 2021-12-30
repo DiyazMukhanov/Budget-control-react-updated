@@ -1,11 +1,25 @@
-import React, {useState} from "react";
+import React, {useState, useReducer} from "react";
 import Expenses from "./Expenses";
 import './AddExpense.css';
+
+const amountReducer = (state, action) => {
+  if(action.type === 'USER_INPUT'){
+     return {value: action.val, isValid:action.val > 0}
+  };
+  if(action.type === 'INPUT_BLUR'){
+    return {value: state.value, isValid:state.value.toString().trim().length > 0 }
+  };
+  return {value:0, isValid: false};
+};
 
 const AddExpense = props => {
 //    const [enteredDate, setEnteredDate] = useState('');
    const [enteredCatName, setEnteredCatName] = useState('Home/Rent');
    const [enteredAmount, setEnteredAmount] = useState('');
+
+   const [amountState, dispatchAmount] = useReducer(amountReducer, 
+      {value: 0, isValid: null}
+   );
    
    
 //    const dateChangeHandler = event => {
@@ -19,12 +33,22 @@ const AddExpense = props => {
    }
 
    const amountChangeHandler = event => {
-    setEnteredAmount(parseInt(event.target.value));
-    console.log(enteredAmount);
+    dispatchAmount({type: 'USER_INPUT', val: parseInt(event.target.value)});
    };
 
-   const saveExpenseHandler = () => {
-       props.onSaveExpense(props.nameOfMonthToday, enteredCatName, enteredAmount );
+   const amountValidityHandler = () => {
+    dispatchAmount({type:'INPUT_BLUR'});
+   };
+
+   const saveExpenseHandler = (event) => {
+       event.preventDefault();
+       if(amountState.value === 0){
+           dispatchAmount({isValid: false}); 
+          return;
+       } else {
+        props.onSaveExpense(props.nameOfMonthToday, enteredCatName, amountState.value );
+       }
+       
     //    props.sumLeftCalc();
    }
 
@@ -50,7 +74,7 @@ const AddExpense = props => {
                    {props.cats.map(cat => <option value={cat.name}>{cat.name}</option>)}
                </select>
                <label>Amount</label>
-               <input onChange={amountChangeHandler}></input>
+               <input onChange={amountChangeHandler} onBlur={amountValidityHandler} className={amountState.isValid === false && 'invalid'} ></input>
                <button onClick={saveExpenseHandler} className=" addExpense-save">Save</button>
            </form>
            <button onClick={goToEditHandler} className=" addExpenses-edit-cat">Edit categories</button>
