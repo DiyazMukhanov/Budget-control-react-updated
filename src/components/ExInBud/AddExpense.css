@@ -4,7 +4,7 @@
 }
 
 .addExpense-header h3 {
-    color: #5F9EA0;
+    color: grey;
     margin-top: 1rem;
 }
 
@@ -26,7 +26,7 @@
 
 .addExpenses-edit-cat {
     margin-top: 6rem;
-    background-color: #5F9EA0;
+    background-color: grey;
     color: white;
 }
 
@@ -34,18 +34,18 @@
     margin-top: 1rem;
     width: 50%;
     margin-left: 25%;
-    background-color: #5F9EA0;
+    background-color: grey;
     color: white;
 }
 
 .addExpense-form label {
     margin-top: 1rem;
-    color: #5F9EA0;
+    color: grey;
     font-weight: bold;
 }
 
 .addExpense-main-btn {
-    background-color: #5F9EA0;
+    background-color: grey;
     color: white;
 }
 

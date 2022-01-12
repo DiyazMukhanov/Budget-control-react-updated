@@ -20,18 +20,22 @@ const MainPage = props => {
   return (
       <div className="main-page">
       <header className="main-page-header">
-      <h1>Home Budget</h1>
+      <h1>Мой Бюджет</h1>
       <h2>{today.date}</h2>
       </header>
       <section className="main-page-section">
-          <ul>
-              <li  key="expenses" >Expenses <span className="main-page-expenses">{props.sumOfTodayMonthExpenses}</span><button onClick={props.expensesEntry} className="main-page-expense-button">Add/View Expenses</button> <button onClick={resetHandler} className="main-page-reset-button">Reset expenses</button></li> 
-              <li key="budget" className="main-li-budget">Budget <span className="budget">{props.budget}</span><button onClick={budgetEnterHandler} className="main-page-budget-button">Change budget</button></li>
-          </ul>
+          
+              <div>Затраты <span className="main-page-expenses">{props.sumOfTodayMonthExpenses}</span></div>
+              
+              <div><button onClick={props.expensesEntry} className="main-page-button">Добавить затраты</button></div>
+              <div><button onClick={resetHandler} className="main-page-button">Сброс затрат</button></div>
+              <div className="main-budget">Бюджет <span className="budget">{props.budget}</span></div>
+              <div><button onClick={budgetEnterHandler} className="main-page-button">Изменить бюджет</button></div>
+          
       </section>
       <footer className="main-page-footer">
-          <h1>Available</h1>
-          <h2>{props.sumLeft} tg</h2>
+          <h1>Осталось</h1>
+          <h2>{props.sumLeft} тг</h2>
       </footer>
       </div>
   );
