@@ -27,11 +27,11 @@ const Budget = props => {
   return (
       <div className="budget-div">
           <form onSubmit={addBudgetHandler}>
-              <label>Add budget sum for this month</label>
+              <label>Добавь бюджет на этот месяц</label>
               <input onChange={budgetChangeHandler}></input>
-              <button type="submit" className="budget-add-btn">Add</button>
+              <button type="submit" className="budget-add-btn">Добавить</button>
           </form>
-          <button onClick={toMainHandler} className="budget-main-btn">Main</button>
+          <button onClick={toMainHandler} className="budget-main-btn">Главная</button>
       </div>
   );
 };

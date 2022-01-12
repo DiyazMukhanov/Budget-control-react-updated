@@ -42,17 +42,17 @@ const Expenses = props => {
    return (
        <div className='expenses-div'>
            <header className='expenses-header'>
-                 <button className='month-change-button prevButton' onClick={monthDecrease} >prev month </button>
+                 <button className='month-change-button prevButton' onClick={monthDecrease} >пред месяц </button>
                  <div className='expenses-month-show'>
                    <h3>{currentMonth}</h3> 
                    <h4>{thisMonthSum}</h4>
                  </div>
-                 <button className='month-change-button nextButton' onClick={monthIncrease}>next month</button>        
+                 <button className='month-change-button nextButton' onClick={monthIncrease}>след месяц</button>        
            </header>
            
            <section className='expenses-section-buttons'>
-              <button className=' expenses-back' onClick={toMainPage}>Main</button>
-              <button className='expenses-plus' onClick={props.addExpenseEntry}>Add</button>
+              <button className=' expenses-back' onClick={toMainPage}>Главная</button>
+              <button className='expenses-plus' onClick={props.addExpenseEntry}>Добавить</button>
            </section>
 
            <section className='expenses-section'>

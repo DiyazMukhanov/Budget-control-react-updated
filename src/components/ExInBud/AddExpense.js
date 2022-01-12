@@ -62,22 +62,22 @@ const AddExpense = props => {
    return (
        <div className="addExpense-div">
            <header className="addExpense-header">
-               <button onClick={toMainPage} className="addExpense-main-btn">Main Page</button>
-               <h3>Add Expense</h3>
+               <button onClick={toMainPage} className="addExpense-main-btn">Главная</button>
+               <h3>Добавить затраты</h3>
                
            </header>
            <form className="addExpense-form">
                {/* <label className ="addexpense-label-date">Date</label> */}
                {/* <input onChange={dateChangeHandler} className="addexpense-input-date"></input> */}
-               <label>Category</label>
+               <label>Категория</label>
                <select onChange={catNameChangeHandler}>
                    {props.cats.map(cat => <option value={cat.name}>{cat.name}</option>)}
                </select>
-               <label>Amount</label>
+               <label>Сумма</label>
                <input onChange={amountChangeHandler} onBlur={amountValidityHandler} className={amountState.isValid === false && 'invalid'} ></input>
-               <button onClick={saveExpenseHandler} className=" addExpense-save">Save</button>
+               <button onClick={saveExpenseHandler} className=" addExpense-save">Сохранить</button>
            </form>
-           <button onClick={goToEditHandler} className=" addExpenses-edit-cat">Edit categories</button>
+           <button onClick={goToEditHandler} className=" addExpenses-edit-cat">Изменить категории</button>
        </div>
    );
 };

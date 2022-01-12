@@ -43,7 +43,7 @@ function App() {
     () => {
       const savedCats = localStorage.getItem("categories");
       const initialCats = JSON.parse(savedCats);
-      return initialCats || [{name: 'Home/Rent', id: 'cat1' },{name: 'Food', id: 'cat2' }, {name: 'Education', id: 'cat3' },{name: 'Utilities', id: 'cat4' }, {name: 'Parents', id: 'cat5'}, {name: 'Investments', id: 'cat6' }, {name: 'Sport', id: 'cat7' }, {name: 'Beauty', id: 'cat8'} ];
+      return initialCats || [{name: 'Дом/Квартира', id: 'cat1' },{name: 'Еда', id: 'cat2' }, {name: 'Образование', id: 'cat3' },{name: 'Ком услуги', id: 'cat4' }, {name: 'Родители', id: 'cat5'}, {name: 'Инвестиции', id: 'cat6' }, {name: 'Спорт', id: 'cat7' }, {name: 'Красота', id: 'cat8'} ];
     }
     );
   
