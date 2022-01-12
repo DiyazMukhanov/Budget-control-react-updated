@@ -3,7 +3,7 @@ import './Expenses.css';
 
 
 const Expenses = props => {
-  const [currentMonth, setCurrentMonth] = useState(props.months[11]);
+  const [currentMonth, setCurrentMonth] = useState(props.nameOfMonthToday);
 
   const monthDecrease = () => {
       if(currentMonth === props.months[0]){
@@ -14,7 +14,7 @@ const Expenses = props => {
           const newMonth = props.months[i - 1];
           return newMonth;
       });
-    console.log(currentMonth);
+    
   }
 
   const monthIncrease = () => {
@@ -42,19 +42,19 @@ const Expenses = props => {
    return (
        <div className='expenses-div'>
            <header className='expenses-header'>
-               <div className=' expenses-back' onClick={toMainPage}>Main</div>
-               <div className='expenses-month-changer'>
-                 <button className='btn btn-outline-primary month-change-button' onClick={monthDecrease} >prev month </button>
+                 <button className='month-change-button prevButton' onClick={monthDecrease} >prev month </button>
                  <div className='expenses-month-show'>
-                 <h3>{currentMonth}</h3> 
-                 <h4>{thisMonthSum}</h4>
+                   <h3>{currentMonth}</h3> 
+                   <h4>{thisMonthSum}</h4>
                  </div>
-                 
-                 <button className='btn btn-outline-primary month-change-button' onClick={monthIncrease}>next month</button>
-               </div>
-               <button className='expenses-plus' onClick={props.addExpenseEntry}>Add</button>
-                  
+                 <button className='month-change-button nextButton' onClick={monthIncrease}>next month</button>        
            </header>
+           
+           <section className='expenses-section-buttons'>
+              <button className=' expenses-back' onClick={toMainPage}>Main</button>
+              <button className='expenses-plus' onClick={props.addExpenseEntry}>Add</button>
+           </section>
+
            <section className='expenses-section'>
            <ul className='expenses-ul'>
                {props.expenses.map(expense => expense.month === currentMonth && <li>{expense.catName} <span>{expense.sum}</span></li> )}  

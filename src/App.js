@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useEffect } from 'react/cjs/react.development';
+
 
 import './App.css';
 import AddCategory from './components/ExInBud/AddCategory';
@@ -10,6 +10,7 @@ import EditCategories from './components/ExInBud/EditCategories';
 import Expenses from './components/ExInBud/Expenses';
 import Login from './components/ExInBud/Login';
 import MainPage from './components/MainPage';
+import ExpensesContext from './store/expenses-context';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
     const intialExpenses = JSON.parse(savedExpenses);
     return intialExpenses || [];
   });
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const months = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'];
   
   //Checking today's month
   const d = new Date();
@@ -45,7 +46,7 @@ function App() {
       return initialCats || [{name: 'Home/Rent', id: 'cat1' },{name: 'Food', id: 'cat2' }, {name: 'Education', id: 'cat3' },{name: 'Utilities', id: 'cat4' }, {name: 'Parents', id: 'cat5'}, {name: 'Investments', id: 'cat6' }, {name: 'Sport', id: 'cat7' }, {name: 'Beauty', id: 'cat8'} ];
     }
     );
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
   // const users = [
   //   {
   //     userName: 'Diyaz',
@@ -159,30 +160,28 @@ function App() {
     });
   }
 
-  const loginHandler = (email, password) => {
-     if(email === 'd' && password === '1'){
-      localStorage.setItem('isLoggedIn', '1'); 
-      setIsLoggedIn(true);
-      setOpenedPage('main');
-     }
-  }
+  
 
   const resetExpensesHandler = () => {
     setExpenses([]);
     setSumLeft(budget);
   };
 
+  
+
   if(openedPage === 'main'){
       return(
+        
         <div className='App'>
           <MainPage expenses = {expenses} expensesEntry = {expensesEntryHandler} budgetEntry = {budgetEntryHandler} budget = {budget} sumLeft = {sumLeft} onResetExpenses = {resetExpensesHandler} sumOfTodayMonthExpenses = {sumOfTodayMonthExpenses}  />
         </div>
+    
       );
   }
   if(openedPage === 'expenses'){
     return(
       <div className='App'>
-        <Expenses expenses = {expenses}  addExpenseEntry = {addExpenseEntryHandler} months = {months} onMainPage = {onMainPageHandler}/>
+        <Expenses expenses = {expenses}  addExpenseEntry = {addExpenseEntryHandler} months = {months} onMainPage = {onMainPageHandler} nameOfMonthToday = {nameOfMonthToday}/>
       </div>
     );
 }
@@ -222,7 +221,7 @@ if(openedPage === 'budget'){
 if(openedPage === 'login'){
   return(
     <div className='App'>
-      <Login onLogin = {loginHandler}/>
+      <Login/>
     </div>
   );
 }

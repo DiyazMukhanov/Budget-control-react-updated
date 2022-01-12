@@ -29,7 +29,7 @@ const AddExpense = props => {
 
    const catNameChangeHandler = event => {
     setEnteredCatName(event.target.value);
-    console.log(enteredCatName);
+    
    }
 
    const amountChangeHandler = event => {
