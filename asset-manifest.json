@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Budget-control-react-updated/static/css/main.9b4c4d00.css",
-    "main.js": "/Budget-control-react-updated/static/js/main.205a8f9b.js",
+    "main.css": "/Budget-control-react-updated/static/css/main.610b436c.css",
+    "main.js": "/Budget-control-react-updated/static/js/main.5d616d06.js",
     "static/js/787.5368dab8.chunk.js": "/Budget-control-react-updated/static/js/787.5368dab8.chunk.js",
     "index.html": "/Budget-control-react-updated/index.html",
-    "main.9b4c4d00.css.map": "/Budget-control-react-updated/static/css/main.9b4c4d00.css.map",
-    "main.205a8f9b.js.map": "/Budget-control-react-updated/static/js/main.205a8f9b.js.map",
+    "main.610b436c.css.map": "/Budget-control-react-updated/static/css/main.610b436c.css.map",
+    "main.5d616d06.js.map": "/Budget-control-react-updated/static/js/main.5d616d06.js.map",
     "787.5368dab8.chunk.js.map": "/Budget-control-react-updated/static/js/787.5368dab8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b4c4d00.css",
-    "static/js/main.205a8f9b.js"
+    "static/css/main.610b436c.css",
+    "static/js/main.5d616d06.js"
   ]
 }
